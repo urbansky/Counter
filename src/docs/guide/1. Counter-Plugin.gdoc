@@ -1,0 +1,73 @@
+h1. Introduction
+
+This plugin manage counters, e.g. you can create a simple access statistic for a website or it can be used as back-end for polling or voting. 
+Every counter has a name and every increment is logged with date and time.
+
+And with the simple tag: @<g:counterMonthlyGraph countMonth="6" name="Test" />@ you have a statistics report as line graph.
+
+!counter-graph.jpg! 
+
+h1. Download
+
+h1. Installation
+
+From official repository: 
+
+{code}
+grails install-plugin counter
+{code}
+
+Or from file:
+
+{code}
+grails install-plugin [path_to]/counter.zip
+{code}
+
+Start your application and navigate to the page @[path_your_app]/counter@. You will see simple test page.
+
+h1. Usage
+
+h2. Increment a counter
+
+Increment a counter within a controller action:
+
+{code}
+def counterService
+
+// Within an action you can increment a counter
+counterService.increment(name: "Test")
+{code}
+
+Increment a counter within a web page (initiated from client side). 
+
+Insert in the body of the HEAD-Section of your GSP: 
+{code:xml}
+<script src="${createLink(action: 'increment', controller: 'counter', params: [name: 'Test'])}" type="text/javascript"></script>
+{code}
+
+Or increment a counter with AJAX. The following example needs JQuery.
+{code}
+$.get(${createLink(action: 'increment', controller: 'counter')}, {name: 'Test'})
+{code}
+
+h2. Show the monthly graph
+
+First you have to include some needed Javascript files in the body of the HEAD-Section of your GSP. The Counter-Plugin provides a simple tag for that.
+
+{code}
+<g:counterRes />
+{code}
+
+{note}This tag will include some needed Javascript files especially JQuery. If you have already the JQuery use the attribute @omitJQuery='true'@ to omit it.{note}
+
+And now you can integrate the monthly graph in the BODY-Section of your GSP:
+{code}
+<g:counterMonthlyGraph countMonth="6" name="Test"
+{code}
+
+h1. Many Thanks
+
+* "jQuery Plugin Boilerplate":http://stefangabos.ro/jquery/jquery-plugin-boilerplate-revisited/
+* "Raphaël JavaScript Library":http://raphaeljs.com/ with "Analytics-Demo":http://raphaeljs.com/analytics.html
+* "Background Pattern":http://backgrounds.mysitemyway.com/free-background-image/56/tileable-pattern-twitter-id/2872/style-id/22/brushed-metal/simple-silver/
+* "Google Webfonts":http://www.google.com/webfonts 

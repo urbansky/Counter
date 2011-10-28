@@ -1,0 +1,26 @@
+h1. counterMonthlyGraph
+
+h2. Description
+
+Creates a monthly graph for a counter. Additional there is a combo box for selecting the month within the last @countMonth@. 
+
+h2. Examples
+
+{code}
+<g:counterMonthlyGraph countMonth="6" name="Test" gridColor="#aaa" graphColor="#666" id="counter" width="980" />
+{code}
+
+h2. Attributes
+
+* @name@ - Name of the Counter 
+* @width@ (optional) - Width of the graph (Default: @800@)
+* @height@ (optional) - Height of the graph (Default: @250@)
+* @countMonth@ (optional) - (Default: @1@)
+* @locale@ (optional) - 
+* @gridColor@ (optional) - (Default: @#333@)
+* @graphColor@ (optional) - (Default: @#666@)
+* @caption@ (optional) - Value caption in tooltip (Default: @{0} Hits@), @{0}@ will be replaced with the value
+* @caption1@ (optional) - Value caption in tooltip if the value is one (Default: @1 Hit@)
+* @id@ (optional) -
+* @graphId@ (optional) -
+* @onComplete@ (optional) -   

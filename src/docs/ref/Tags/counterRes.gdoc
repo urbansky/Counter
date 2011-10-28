@@ -1,0 +1,11 @@
+h1. counterRes
+
+h2. Description
+
+Renders a page with some useful information.
+
+h2. Examples
+
+h2. Attributes
+
+* @omitJQuery@ - 

@@ -1,0 +1,81 @@
+h1. increment(Map params)
+
+h2. Description
+
+Increments a counter with the given @name@. There is no need to create a new counter. 
+
+h2. Examples
+	
+{code}
+counterService.increment(name: "Test")
+{code}
+
+h2. Parameter
+
+* @name@ - Name of the Counter 
+
+h1. getCounterNames()
+
+h2. Description
+
+Returns a list of all names. 
+
+h2. Examples
+
+{code}
+counterService.getCounterNames()
+{code}
+
+h1. getCounterCounts()
+
+h2. Description
+
+Returns a list of all names with the total counts.
+
+h2. Examples
+
+{code}
+counterService.getCounterCounts().each {
+  println "Counter name: " + it[0]
+  println "Total count : " + it[1]
+}
+{code}
+
+h1. getCounterData(Map params)
+
+h2. Description
+
+Get the detailed data for an counter within a date range. It returns a list where every entry is the total count for a day. 
+
+h2. Examples
+
+{code}
+// Data for the last 10 days
+counterService.getCounterData(name: "Test", from: new Date(), to: (new Date()) - 9)
+{code}
+
+h2. Parameter
+
+* @name@ - Name of the Counter 
+* @month@ (optional, java.util.Date) - 
+* @from@ (optional, java.util.Date) - 
+* @to@ (optional, java.util.Date) - 
+
+Specify a period with @from@ and @to@ or for a whole month pass any date with @month@.
+If @from@, @to@ or @month@ not given than it return the data for the current month.
+
+h1. deleteCounter(Map params)
+
+h2. Description
+
+Deletes all entries for an counter.
+
+h2. Examples
+
+{code}
+counterService.deleteCounter(name: "Test")
+{code}
+
+h2. Parameter
+
+* @name@ - Name of the Counter 
