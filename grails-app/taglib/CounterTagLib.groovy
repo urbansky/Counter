@@ -42,6 +42,7 @@ class CounterTagLib {
     List comboData = []
     DateFormat formatter = new SimpleDateFormat("MMMM yyyy", locale)
     Date date = new Date()
+    date[DAY_OF_MONTH] = 1
     countMonth.times {
       comboData << [name: formatter.format(date), id: date.format("MM-yyyy")]
       date[MONTH] -= 1
