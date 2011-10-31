@@ -43,6 +43,7 @@ class CounterController {
   def ajaxData = {
     Date m = new Date()
     m.clearTime()
+    m[DAY_OF_MONTH] = 1
     m[YEAR] = params.year as int
     m[MONTH] = params.month as int
     params.month = m
@@ -50,7 +51,7 @@ class CounterController {
     List statData = counterService.getCounterData(params)
 
     render(contentType: "text/json") {
-      labels 1..statData.size()
+      labels new ArrayList(1..statData.size())
       data statData
     }
   }
