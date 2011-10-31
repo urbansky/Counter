@@ -1,4 +1,5 @@
 import static java.util.Calendar.*
+import grails.converters.*
 
 class CounterController {
   
@@ -51,8 +52,8 @@ class CounterController {
     List statData = counterService.getCounterData(params)
 
     render(contentType: "text/json") {
-      labels new ArrayList(1..statData.size())
-      data statData
+      labels = 1..statData.size()
+      data = statData
     }
   }
   
