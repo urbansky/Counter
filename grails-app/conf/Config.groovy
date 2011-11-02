@@ -28,6 +28,7 @@ log4j = {
     warn   'org.mortbay.log'
 }
 
+
 grails.doc.images = new File("src/docs/images")
 grails.doc.authors = "Stefan Urbansky"
 grails.doc.license = "Apache License, Version 2.0"
