@@ -1,10 +1,14 @@
 <plugin name='counter' version='0.1' grailsVersion='1.3.7 &gt; *'>
-  <author>Your name</author>
-  <title>Plugin summary/headline</title>
+  <author>Stefan Urbansky</author>
+  <authorEmail>urbansky@e-learning-service.de</authorEmail>
+  <title>Manage Counters</title>
   <description>\
-Brief description of the plugin.
+This plugin manage counters, e.g. you can create a simple access statistic for a website or it 
+can be used as back-end for polling or voting. 
+Every counter has a name and every increment is logged with date and time.
+With the provided Taglib you can create line graphs for a monthly statistic.
 </description>
-  <documentation>http://grails.org/plugin/counter</documentation>
+  <documentation>http://www.webapp-blogger.de/grails-plugin-counter/</documentation>
   <resources>
     <resource>BuildConfig</resource>
     <resource>Config</resource>

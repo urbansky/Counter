@@ -51,10 +51,11 @@ class CounterController {
 
     List statData = counterService.getCounterData(params)
 
-    render(contentType: "text/json") {
-      labels = 1..statData.size()
-      data = statData
-    }
+    render([
+      labels: 1..statData.size(),
+      data: statData
+    ].encodeAsJSON())
+    
   }
   
   def delete = {
