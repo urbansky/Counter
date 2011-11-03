@@ -39,6 +39,8 @@ Raphael.fn.drawGrid = function (x, y, w, h, wv, hv, color) {
       labelY1: function() { return "1 Zugriff"},
       onComplete: function() { },
       gridColor: "#333",
+      graphColor: "#666",
+      graphWidth: 4,
       width: 800,
       height: 250
     }
@@ -116,7 +118,7 @@ Raphael.fn.drawGrid = function (x, y, w, h, wv, hv, color) {
       if (max == 0) max = 10; // max = 0 geht nicht
       var Y = (height - bottomgutter - topgutter) / max;
       r.drawGrid(leftgutter + X * .5 + .5, topgutter + .5, width - leftgutter - X, height - topgutter - bottomgutter, 10, 10, plugin.settings.gridColor);
-      var path = r.path().attr({stroke: color, "stroke-width": 4, "stroke-linejoin": "round"}),
+      var path = r.path().attr({stroke: color, "stroke-width": plugin.settings.graphWidth, "stroke-linejoin": "round"}),
           bgp = r.path().attr({stroke: "none", opacity: .3, fill: color}),
           label = r.set(),
           lx = 0, ly = 0,
@@ -146,7 +148,7 @@ Raphael.fn.drawGrid = function (x, y, w, h, wv, hv, color) {
               p = p.concat([a.x1, a.y1, x, y, a.x2, a.y2]);
               bgpp = bgpp.concat([a.x1, a.y1, x, y, a.x2, a.y2]);
           }
-          var dot = r.circle(x, y, 4).attr({fill: "#f0f0f0", stroke: color, "stroke-width": 4}); // Datenpunkt 
+          var dot = r.circle(x, y, 4).attr({fill: "#f0f0f0", stroke: color, "stroke-width": plugin.settings.graphWidth}); // Datenpunkt 
           blanket.push(r.rect(leftgutter + X * i, 0, X, height - bottomgutter).attr({stroke: "none", fill: "#fff", opacity: 0}));
           var rect = blanket[blanket.length - 1];
           (function (x, y, data, lbl, dot) {

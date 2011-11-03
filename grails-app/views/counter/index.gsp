@@ -56,9 +56,7 @@
 			.select.selected { background-color: #666; color: #f8f8f8; }
 			.badge { 
 				display: inline-block; padding: 1px 4px; margin: 0 0 14px -19px; border-radius: 7px; 
-				background-color: #d92e2e; font-size: 12px; color: white; vertical-align: bottom;
-				background-color: #fd8d46;
-				background-color: #cb7840;
+				font-size: 12px; color: white; vertical-align: bottom; background-color: #cb7840;
 			}
 			.counterDate { display: inline-block; width: 160px; }
 			.counterTime { display: inline-block; width: 70px; }
@@ -131,7 +129,7 @@
 							<span class="badge">${counter[1]}</span>
 						</g:each>
 					</div>
-					<g:counterMonthlyGraph countMonth="6" name="${counterList[0][0]}" gridColor="#aaa" graphColor="#666" graphId="counter" id="graph" width="980" onComplete="graphReady();"/>
+					<g:counterMonthlyGraph countMonth="6" name="${counterList[0][0]}" gridColor="#aaa" graphColor="#666" graphWidth="2" graphId="counter" id="graph" width="980" onComplete="graphReady();"/>
 				</g:else>
 			</article>
 			

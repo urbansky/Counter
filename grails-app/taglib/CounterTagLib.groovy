@@ -32,6 +32,8 @@ class CounterTagLib {
     String gridColor = attrs.gridColor ?: "#333"
     String graphColor = attrs.graphColor ?: "#666"
     
+    String graphWidth = attrs.graphWidth ?: 4
+    
     int width = attrs.width ? attrs.width as int : 800
     int height = attrs.height ? attrs.height as int : 250
     
@@ -74,6 +76,7 @@ class CounterTagLib {
             labelX: function(value) { return value + ". " + \$("#monthSelect-${graphId} option:selected").text(); },
             gridColor: "${gridColor}",
             graphColor: "${graphColor}",
+            graphWidth: "${graphWidth}",
             labelY: function(value) { return "${labelY}".replace("{0}", value) },
             labelY1: function() { return "${labelY1}" },
             width: ${width},
