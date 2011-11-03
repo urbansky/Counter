@@ -11,6 +11,7 @@ class CounterTagLib {
    * locale
    * gridColor
    * graphColor
+   * graphWidth
    * id
    * graphId
    * width
