@@ -9,16 +9,11 @@ Every counter has a name and every increment is logged with date and time.
 With the provided Taglib you can create line graphs for a monthly statistic.
 </description>
   <documentation>http://www.webapp-blogger.de/grails-plugin-counter/</documentation>
+  <type>CounterGrailsPlugin</type>
   <resources>
-    <resource>BuildConfig</resource>
-    <resource>Config</resource>
-    <resource>DataSource</resource>
-    <resource>UrlMappings</resource>
     <resource>CounterController</resource>
     <resource>Counter</resource>
     <resource>CounterService</resource>
     <resource>CounterTagLib</resource>
   </resources>
-  <dependencies />
-  <behavior />
 </plugin>
