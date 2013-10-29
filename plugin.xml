@@ -1,4 +1,4 @@
-<plugin name='counter' version='0.1.1' grailsVersion='2.3 &gt; *'>
+<plugin name='counter' version='0.1.3' grailsVersion='2.3 &gt; *'>
   <author>Stefan Urbansky</author>
   <authorEmail>urbansky@e-learning-service.de</authorEmail>
   <title>Manage Counters</title>
@@ -11,6 +11,7 @@ With the provided Taglib you can create line graphs for a monthly statistic.
   <documentation>http://www.webapp-blogger.de/grails-plugin-counter/</documentation>
   <type>CounterGrailsPlugin</type>
   <resources>
+    <resource>CounterPluginResources</resource>
     <resource>CounterController</resource>
     <resource>Counter</resource>
     <resource>CounterService</resource>

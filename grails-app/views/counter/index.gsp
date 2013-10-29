@@ -1,14 +1,14 @@
 <html lang="en">
   <head>
 	  <title>Counter</title>
-	  <g:counterRes />
-	  
+	  <r:require modules="counter"/>
+	  <r:layoutResources/>
+
 	  <link href='http://fonts.googleapis.com/css?family=Maven+Pro:500' rel='stylesheet' type='text/css'>
 	  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
-	   <script src="${resource(dir: 'js', file: 'modernizr-2.0.min.js')}"></script>
 	  <style type="text/css">
 			body { 
-				background: url(${resource(dir: 'images', file: 'background.jpg')}) repeat;  
+				/*background: url(${resource(dir: 'images', file: 'background.jpg')}) repeat;  */
 				color: #666; font-family: "Maven Pro", "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif; 
 			}
 			a { text-decoration: none; }
@@ -72,7 +72,7 @@
 			.button:hover { background-color: #eee; text-decoration: none; }
 			
 	  </style>
-	  <script type="text/javascript">
+	  <r:script>
 		  $(function () {
 		    $("#counterList span").click(function() {
 		      $("#counterList span").removeClass("selected");
@@ -102,7 +102,7 @@
 			function graphReady() {
 			  $("#graph .graphHeaderRight").text("Example right component");
 			}
-	  </script>
+	  </r:script>
   </head>
 
   <body>
@@ -165,5 +165,6 @@
 			</article>
 			
 		</div>
+		<r:layoutResources/>
   </body>
 </html>

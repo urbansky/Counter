@@ -49,21 +49,20 @@ class CounterTagLib {
     }
 
     if (id) {
-      out.println "<div id='${id}'>"
+      out << "<div id='${id}'>"
     } else {
-      out.println "<div>"
+      out << "<div>"
     }
-    out.println "<div>"
-    out.println "  <span style='float:left' class='graphHeaderLeft'>"
-    out.println "    <input id='month-prev-${graphId}' type='button' value='&lt;'/>"
-    out.println select(id: "monthSelect-${graphId}", name: "monthSelect-${graphId}", from: comboData, optionKey: "id", optionValue: "name", value: comboData[0].id)
-    out.println "    <input id='month-next-${graphId}' type='button' value='&gt;'/>"
-    out.println "  </span>"
-    out.println "  <span style='float:right' class='graphHeaderRight'></span>"
-    out.println "</div>"
-    out.println "<div id='${graphId}'></div>"
-    out.println """
-      <script type="text/javascript">
+    out << "<div>"
+    out << "  <span style='float:left' class='graphHeaderLeft'>"
+    out << "    <input id='month-prev-${graphId}' type='button' value='&lt;'/>"
+    out << select(id: "monthSelect-${graphId}", name: "monthSelect-${graphId}", from: comboData, optionKey: "id", optionValue: "name", value: comboData[0].id)
+    out << "    <input id='month-next-${graphId}' type='button' value='&gt;'/>"
+    out << "  </span>"
+    out << "  <span style='float:right' class='graphHeaderRight'></span>"
+    out << "</div>"
+    out << "<div id='${graphId}'></div>"
+    out << r.script() { """
         \$(function () {
           var idSplitStart = \$("#monthSelect-${graphId}").val().split("-");
           \$("#${graphId}").monthlyGraph({
@@ -95,20 +94,8 @@ class CounterTagLib {
           });
           
         });
-      </script>
-    """
-    out.println "</div>"
+    """ }
+    out << "</div>"
   }
   
-  /**
-   * List of attributes:
-   * 
-   * omitJQuery
-   */
-  def counterRes = { attrs, body ->
-    out.println """<script type="text/javascript" src="${resource(dir: 'js', file: 'raphael.js', plugin: 'counter')}"></script>"""
-    out.println """<script type="text/javascript" src="${resource(dir: 'js', file: 'popup.js', plugin: 'counter')}"></script>"""
-    if (!attrs.omitJQuery) out.println """<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery-1.6.4.min.js', plugin: 'counter')}"></script>"""
-    out.println """<script type="text/javascript" src="${resource(dir: 'js', file: 'jquery-monthlyGraph.js', plugin: 'counter')}"></script>"""
-  }
 }
