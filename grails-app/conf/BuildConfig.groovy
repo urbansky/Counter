@@ -40,7 +40,14 @@ grails.project.dependency.resolution = {
     }
     
     plugins {
-        build(":release:3.0.0",
+        compile ':hibernate:3.6.10.2'
+
+        // plugins needed at runtime but not for compilation
+        runtime ":hibernate:3.6.10.2" // or ":hibernate4:4.1.11.1"
+
+        build ":tomcat:7.0.42"
+
+        build(":release:3.0.1",
               ":rest-client-builder:1.0.3") {
             export = false
         }

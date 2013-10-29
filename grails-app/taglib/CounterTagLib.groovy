@@ -56,7 +56,7 @@ class CounterTagLib {
     out.println "<div>"
     out.println "  <span style='float:left' class='graphHeaderLeft'>"
     out.println "    <input id='month-prev-${graphId}' type='button' value='&lt;'/>"
-    out.println select(id: "monthSelect-${graphId}", from: comboData, optionKey: "id", optionValue: "name", value: comboData[0].id)
+    out.println select(id: "monthSelect-${graphId}", name: "monthSelect-${graphId}", from: comboData, optionKey: "id", optionValue: "name", value: comboData[0].id)
     out.println "    <input id='month-next-${graphId}' type='button' value='&gt;'/>"
     out.println "  </span>"
     out.println "  <span style='float:right' class='graphHeaderRight'></span>"

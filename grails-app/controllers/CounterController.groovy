@@ -54,7 +54,7 @@ class CounterController {
     render([
       labels: 1..statData.size(),
       data: statData
-    ].encodeAsJSON())
+    ] as JSON)
     
   }
   
