@@ -1,10 +1,12 @@
 <html lang="en">
   <head>
 	  <title>Counter</title>
-	  <r:require modules="counter"/>
-	  <r:layoutResources/>
+    <script src="${resource(dir: 'js', file: 'jquery-1.6.4.min.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'raphael.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'jquery-monthlyGraph.js')}"></script>
+    <script src="${resource(dir: 'js', file: 'popup.js')}"></script>
 
-	  <link href='http://fonts.googleapis.com/css?family=Maven+Pro:500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro:500' rel='stylesheet' type='text/css'>
 	  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 	  <style type="text/css">
 			body { 
@@ -165,6 +167,5 @@
 			</article>
 			
 		</div>
-		<r:layoutResources/>
   </body>
 </html>
