@@ -1,4 +1,4 @@
-<plugin name='counter' version='0.1.4' grailsVersion='2.3 &gt; *'>
+<plugin name='counter' version='0.1.5' grailsVersion='2.3 &gt; *'>
   <author>Stefan Urbansky</author>
   <authorEmail>urbansky@e-learning-service.de</authorEmail>
   <title>Manage Counters</title>
