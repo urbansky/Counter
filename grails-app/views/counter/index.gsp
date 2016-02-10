@@ -74,7 +74,7 @@
 			.button:hover { background-color: #eee; text-decoration: none; }
 			
 	  </style>
-	  <r:script>
+    <script type="text/javascript">
 		  $(function () {
 		    $("#counterList span").click(function() {
 		      $("#counterList span").removeClass("selected");
@@ -104,7 +104,7 @@
 			function graphReady() {
 			  $("#graph .graphHeaderRight").text("Example right component");
 			}
-	  </r:script>
+	  </script>
   </head>
 
   <body>

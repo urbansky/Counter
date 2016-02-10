@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Counter.iml" filepath="$PROJECT_DIR$/.idea/Counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Counter-grailsPlugins.iml" filepath="$PROJECT_DIR$/.idea/Counter-grailsPlugins.iml" />
     </modules>
   </component>
 </project>
