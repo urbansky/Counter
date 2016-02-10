@@ -20,7 +20,7 @@ class CounterTagLib {
   def counterMonthlyGraph = { attrs, body ->
     String id = attrs.id ?: ''
     
-    // Erzeuge eine zufällige ID, damit auf einer HTML-Seite mehrere monthlyGraph-Elemente gerendert werden können 
+    // Erzeuge eine zufï¿½llige ID, damit auf einer HTML-Seite mehrere monthlyGraph-Elemente gerendert werden kï¿½nnen 
     String graphId = attrs.graphId ?: Math.round(Math.random() * 1000000)
     
     String link = createLink(action: 'ajaxData', controller: 'counter')
@@ -62,7 +62,8 @@ class CounterTagLib {
     out << "  <span style='float:right' class='graphHeaderRight'></span>"
     out << "</div>"
     out << "<div id='${graphId}'></div>"
-    out << r.script() { """
+    out << """
+      <script type="text/javascript">
         \$(function () {
           var idSplitStart = \$("#monthSelect-${graphId}").val().split("-");
           \$("#${graphId}").monthlyGraph({
@@ -94,7 +95,8 @@ class CounterTagLib {
           });
           
         });
-    """ }
+      </script>
+    """
     out << "</div>"
   }
   
