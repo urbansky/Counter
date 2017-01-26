@@ -86,11 +86,13 @@ class CounterTagLib {
           }
           \$("#monthSelect-${graphId}").change(monthSelect).keyup(monthSelect);
           \$("#month-prev-${graphId}").click(function() {
-            \$("#monthSelect-${graphId}").val(\$("#monthSelect-${graphId} option:selected").next('option').val())
+            var newVal = \$("#monthSelect-${graphId} option:selected").next('option').val()
+            if (newVal) \$("#monthSelect-${graphId}").val(newVal)
             monthSelect();
           });
           \$("#month-next-${graphId}").click(function() {
-            \$("#monthSelect-${graphId}").val(\$("#monthSelect-${graphId} option:selected").prev('option').val())
+            var newVal = \$("#monthSelect-${graphId} option:selected").prev('option').val()
+            if (newVal) \$("#monthSelect-${graphId}").val(newVal)
             monthSelect();
           });
           

@@ -1,3 +1,4 @@
 grails-counter-*.zip
 grails-counter-*.zip.sha1
 target/
+.idea
